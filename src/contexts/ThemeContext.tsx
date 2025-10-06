@@ -374,48 +374,6 @@ const translations = {
     'event.price': 'Price',
     'event.description': 'Description',
     'event.organizer': 'Organizer',
-    
-    // Onboarding
-    'onboarding.interests': 'What are your interests?',
-    'onboarding.interestsDesc': 'Select at least one area that interests you',
-    'onboarding.budget': 'What is your budget?',
-    'onboarding.budgetDesc': 'This helps us suggest suitable events',
-    'onboarding.accessibility': 'Accessibility needs?',
-    'onboarding.accessibilityDesc': 'Select the options that apply to you',
-    'onboarding.mood': 'What is your mood?',
-    'onboarding.moodDesc': 'How do you like to discover culture?',
-    
-    // Interests
-    'interest.music': 'Music',
-    'interest.art': 'Art',
-    'interest.food': 'Food',
-    'interest.literature': 'Literature',
-    'interest.photography': 'Photography',
-    'interest.gaming': 'Gaming',
-    
-    // Budget
-    'budget.low': 'Tight budget',
-    'budget.lowDesc': 'Free and low-cost events',
-    'budget.medium': 'Moderate budget',
-    'budget.mediumDesc': 'Events up to €30',
-    'budget.high': 'Comfortable budget',
-    'budget.highDesc': 'All types of events',
-    
-    // Accessibility
-    'accessibility.wheelchair': 'Wheelchair accessible',
-    'accessibility.hearing': 'Hearing loop',
-    'accessibility.visual': 'Visual aids',
-    'accessibility.quiet': 'Quiet space',
-    
-    // Mood
-    'mood.explorer': 'Explorer',
-    'mood.explorerDesc': 'I like to discover new places',
-    'mood.relaxed': 'Relaxed',
-    'mood.relaxedDesc': 'I prefer calm activities',
-    'mood.adventurous': 'Adventurous',
-    'mood.adventurousDesc': 'I seek adventure and the unexpected',
-    'mood.social': 'Social',
-    'mood.socialDesc': 'I like meeting new people',
   },
 };
 

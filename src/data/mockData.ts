@@ -32,6 +32,7 @@ export const mockEvents: Event[] = [
     reviews: [
       {
         id: '1',
+        userId: 'user1',
         userName: 'Marie L.',
         rating: 5,
         comment: 'Une soirée magique ! Sarah Chen est une artiste exceptionnelle.',
@@ -489,6 +490,7 @@ export const mockArtists: Artist[] = [
 export const mockCommunityPosts: CommunityPost[] = [
   {
     id: '1',
+    userId: 'user1',
     userName: 'Marie Dubois',
     userAvatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=50',
     type: 'recommendation',
@@ -509,6 +511,7 @@ export const mockCommunityPosts: CommunityPost[] = [
   },
   {
     id: '2',
+    userId: 'user2',
     userName: 'Sophie Martin',
     userAvatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=50',
     type: 'interview',
