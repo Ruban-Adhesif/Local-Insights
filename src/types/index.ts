@@ -87,7 +87,6 @@ export interface CommunityPost {
 
 export interface Comment {
   id: string;
-  userId: string;
   userName: string;
   content: string;
   date: string;

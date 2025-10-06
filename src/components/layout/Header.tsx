@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { Heart, MapPin, Users, User, LogOut, Star } from 'lucide-react';
+import { Heart, MapPin, Users, LogOut } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { ThemeControls } from '../ui/ThemeControls';
 import { AuthModal } from '../ui/AuthModal';
