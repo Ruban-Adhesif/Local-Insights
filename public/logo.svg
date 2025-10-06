@@ -1,0 +1,17 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Building -->
+  <path d="M4 20 L4 8 L8 8 L8 6 L12 6 L12 8 L16 8 L16 20 L4 20 Z M6 10 L6 18 L14 18 L14 10 L6 10 Z" fill="#8B4513"/>
+  
+  <!-- Hills -->
+  <path d="M2 20 Q8 16 14 20 Q20 16 26 20 L26 24 L2 24 Z" fill="#8B4513"/>
+  <path d="M0 22 Q6 18 12 22 Q18 18 24 22 Q30 18 32 22 L32 24 L0 24 Z" fill="#8B4513"/>
+  
+  <!-- Tree -->
+  <path d="M20 20 L20 14 L18 14 L18 12 L22 12 L22 14 L20 14 Z" fill="#8B4513"/>
+  <path d="M18 12 Q20 8 22 12 Q20 6 18 12 Z" fill="#8B4513"/>
+  
+  <!-- Jug -->
+  <path d="M26 20 L26 8 Q26 6 28 6 Q30 6 30 8 L30 20 Q30 22 28 22 Q26 22 26 20 Z" fill="#8B4513"/>
+  <path d="M28 4 L28 2 L30 2 L30 4 L28 4 Z" fill="#8B4513"/>
+  <path d="M26 20 L30 20 L30 24 L26 24 Z" fill="#8B4513"/>
+</svg>
