@@ -93,7 +93,7 @@ export function Home() {
             <p className="text-gray-600 dark:text-gray-300 mb-8">
               {t('onboarding.interestsDesc')}
             </p>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
               {getInterests(t).map((interest) => {
                 const Icon = interest.icon;
                 const isSelected = profile.interests.includes(interest.id);
@@ -101,7 +101,7 @@ export function Home() {
                   <button
                     key={interest.id}
                     onClick={() => handleInterestToggle(interest.id)}
-                    className={`p-4 rounded-xl border-2 transition-all ${
+                    className={`p-3 sm:p-4 rounded-xl border-2 transition-all ${
                       isSelected
                         ? 'border-primary-500 bg-primary-50 text-primary-700'
                         : 'border-gray-200 hover:border-gray-300'
@@ -125,19 +125,19 @@ export function Home() {
             <p className="text-gray-600 dark:text-gray-300 mb-8">
               {t('onboarding.budgetDesc')}
             </p>
-            <div className="space-y-4">
+            <div className="space-y-3 sm:space-y-4">
               {getBudgetOptions(t).map((option) => (
                 <button
                   key={option.id}
                   onClick={() => setProfile(prev => ({ ...prev, budget: option.id }))}
-                  className={`w-full p-6 rounded-xl border-2 text-left transition-all ${
+                  className={`w-full p-4 sm:p-6 rounded-xl border-2 text-left transition-all ${
                     profile.budget === option.id
                       ? 'border-primary-500 bg-primary-50'
                       : 'border-gray-200 hover:border-gray-300'
                   }`}
                 >
-                  <h3 className="font-semibold text-lg mb-2">{option.label}</h3>
-                  <p className="text-gray-600">{option.description}</p>
+                  <h3 className="font-semibold text-base sm:text-lg mb-2">{option.label}</h3>
+                  <p className="text-sm sm:text-base text-gray-600">{option.description}</p>
                 </button>
               ))}
             </div>
@@ -153,7 +153,7 @@ export function Home() {
             <p className="text-gray-600 mb-8">
               {t('onboarding.accessibilityDesc')}
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
               {getAccessibilityOptions(t).map((option) => {
                 const isSelected = profile.accessibility.includes(option.id);
                 return (
@@ -190,19 +190,19 @@ export function Home() {
             <p className="text-gray-600 mb-8">
               {t('onboarding.moodDesc')}
             </p>
-            <div className="space-y-4">
+            <div className="space-y-3 sm:space-y-4">
               {getMoodOptions(t).map((option) => (
                 <button
                   key={option.id}
                   onClick={() => setProfile(prev => ({ ...prev, mood: option.id }))}
-                  className={`w-full p-6 rounded-xl border-2 text-left transition-all ${
+                  className={`w-full p-4 sm:p-6 rounded-xl border-2 text-left transition-all ${
                     profile.mood === option.id
                       ? 'border-primary-500 bg-primary-50'
                       : 'border-gray-200 hover:border-gray-300'
                   }`}
                 >
-                  <h3 className="font-semibold text-lg mb-2">{option.label}</h3>
-                  <p className="text-gray-600">{option.description}</p>
+                  <h3 className="font-semibold text-base sm:text-lg mb-2">{option.label}</h3>
+                  <p className="text-sm sm:text-base text-gray-600">{option.description}</p>
                 </button>
               ))}
             </div>
@@ -217,56 +217,56 @@ export function Home() {
   if (!showOnboarding) {
     return (
       <div className="min-h-screen bg-white dark:bg-dark-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="text-center mb-20">
-            <div className="flex justify-center mb-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16">
+          <div className="text-center mb-12 sm:mb-20">
+            <div className="flex justify-center mb-6 sm:mb-8">
               <img 
                 src="/logo.svg" 
                 alt="Local Insights Logo" 
-                className="w-16 h-16"
+                className="w-12 h-12 sm:w-16 sm:h-16"
               />
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6 leading-tight">
               {t('home.title')}
             </h1>
-            <p className="text-lg text-gray-600 dark:text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-8 sm:mb-10 max-w-2xl mx-auto leading-relaxed px-4">
               {t('home.subtitle')}
             </p>
             <Button 
               size="lg" 
               onClick={() => setShowOnboarding(true)}
-              className="text-base px-8 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100"
+              className="text-sm sm:text-base px-6 sm:px-8 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100"
             >
               {t('home.createProfile')}
               <ArrowRight className="ml-2 w-4 h-4" />
             </Button>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-20">
             <div className="text-center">
-              <div className="w-12 h-12 bg-gray-100 dark:bg-dark-800 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <MapPin className="w-6 h-6 text-gray-600 dark:text-gray-400" />
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-100 dark:bg-dark-800 rounded-lg flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600 dark:text-gray-400" />
               </div>
-              <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white">{t('home.localDiscovery')}</h3>
-              <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+              <h3 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3 text-gray-900 dark:text-white">{t('home.localDiscovery')}</h3>
+              <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm leading-relaxed px-2">
                 {t('home.localDiscoveryDesc')}
               </p>
             </div>
             <div className="text-center">
-              <div className="w-12 h-12 bg-gray-100 dark:bg-dark-800 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Music className="w-6 h-6 text-gray-600 dark:text-gray-400" />
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-100 dark:bg-dark-800 rounded-lg flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                <Music className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600 dark:text-gray-400" />
               </div>
-              <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white">{t('home.independentArtists')}</h3>
-              <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+              <h3 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3 text-gray-900 dark:text-white">{t('home.independentArtists')}</h3>
+              <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm leading-relaxed px-2">
                 {t('home.independentArtistsDesc')}
               </p>
             </div>
-            <div className="text-center">
-              <div className="w-12 h-12 bg-gray-100 dark:bg-dark-800 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Users className="w-6 h-6 text-gray-600 dark:text-gray-400" />
+            <div className="text-center sm:col-span-2 lg:col-span-1">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-100 dark:bg-dark-800 rounded-lg flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                <Users className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600 dark:text-gray-400" />
               </div>
-              <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white">{t('home.community')}</h3>
-              <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+              <h3 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3 text-gray-900 dark:text-white">{t('home.community')}</h3>
+              <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm leading-relaxed px-2">
                 {t('home.communityDesc')}
               </p>
             </div>
@@ -293,11 +293,11 @@ export function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12">
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center py-6 sm:py-12">
       <div className="max-w-2xl w-full mx-auto px-4">
-        <Card className="p-8">
-          <div className="mb-8">
-            <div className="flex justify-between text-sm text-gray-600 mb-2">
+        <Card className="p-4 sm:p-8">
+          <div className="mb-6 sm:mb-8">
+            <div className="flex justify-between text-xs sm:text-sm text-gray-600 mb-2">
               <span>{t('onboarding.step')} {currentStep + 1} {t('onboarding.of')} 4</span>
               <span>{Math.round(((currentStep + 1) / 4) * 100)}%</span>
             </div>
@@ -311,17 +311,19 @@ export function Home() {
 
           {renderStep()}
 
-          <div className="flex justify-between mt-8">
+          <div className="flex flex-col sm:flex-row justify-between gap-3 sm:gap-0 mt-6 sm:mt-8">
             <Button 
               variant="ghost" 
               onClick={handleBack}
               disabled={currentStep === 0}
+              className="order-2 sm:order-1"
             >
               {t('onboarding.back')}
             </Button>
             <Button 
               onClick={handleNext}
               disabled={!canProceed()}
+              className="order-1 sm:order-2"
             >
               {currentStep === 3 ? t('onboarding.finish') : t('onboarding.next')}
               <ArrowRight className="ml-2 w-4 h-4" />

@@ -66,7 +66,25 @@ export const mockEvents: Event[] = [
       type: 'organization'
     },
     tags: ['street-art', 'gratuit', 'visite-guidée', 'belleville'],
-    rating: 4.6
+    rating: 4.6,
+    reviews: [
+      {
+        id: '2',
+        userId: 'user2',
+        userName: 'Pierre M.',
+        rating: 5,
+        comment: 'Exposition incroyable ! Les artistes sont très accessibles et expliquent bien leur travail.',
+        date: '2024-01-15'
+      },
+      {
+        id: '3',
+        userId: 'user3',
+        userName: 'Sophie L.',
+        rating: 4,
+        comment: 'Très belle découverte du street art parisien. Gratuit et instructif !',
+        date: '2024-01-12'
+      }
+    ]
   },
   {
     id: '3',
@@ -95,7 +113,25 @@ export const mockEvents: Event[] = [
     },
     tags: ['cuisine', 'italienne', 'atelier', 'pasta'],
     capacity: 12,
-    rating: 4.9
+    rating: 4.9,
+    reviews: [
+      {
+        id: '4',
+        userId: 'user4',
+        userName: 'Antoine R.',
+        rating: 5,
+        comment: 'Chef Marco est exceptionnel ! J\'ai appris à faire des pâtes fraîches parfaites. Expérience inoubliable !',
+        date: '2024-01-18'
+      },
+      {
+        id: '5',
+        userId: 'user5',
+        userName: 'Camille D.',
+        rating: 5,
+        comment: 'Atelier très bien organisé, ambiance chaleureuse. Le tiramisu était divin !',
+        date: '2024-01-16'
+      }
+    ]
   },
   {
     id: '4',
@@ -123,7 +159,25 @@ export const mockEvents: Event[] = [
       type: 'venue'
     },
     tags: ['slam', 'poésie', 'open-mic', 'convivial'],
-    rating: 4.7
+    rating: 4.7,
+    reviews: [
+      {
+        id: '6',
+        userId: 'user6',
+        userName: 'Lucas P.',
+        rating: 5,
+        comment: 'Ambiance incroyable ! Très bon accueil, on se sent à l\'aise pour partager ses textes.',
+        date: '2024-01-20'
+      },
+      {
+        id: '7',
+        userId: 'user7',
+        userName: 'Emma T.',
+        rating: 4,
+        comment: 'Soirée très conviviale, parfaite pour découvrir le slam parisien.',
+        date: '2024-01-18'
+      }
+    ]
   },
   {
     id: '5',
@@ -151,7 +205,25 @@ export const mockEvents: Event[] = [
       type: 'organization'
     },
     tags: ['histoire', 'nocturne', 'légendes', 'visite-guidée'],
-    rating: 4.5
+    rating: 4.5,
+    reviews: [
+      {
+        id: '8',
+        userId: 'user8',
+        userName: 'Thomas M.',
+        rating: 5,
+        comment: 'Visite fascinante ! Le guide connaît parfaitement l\'histoire du cimetière. Très instructif.',
+        date: '2024-01-23'
+      },
+      {
+        id: '9',
+        userId: 'user9',
+        userName: 'Julie K.',
+        rating: 4,
+        comment: 'Ambiance mystérieuse parfaite. Parfait pour une sortie originale.',
+        date: '2024-01-21'
+      }
+    ]
   },
   {
     id: '6',
@@ -180,7 +252,25 @@ export const mockEvents: Event[] = [
     },
     tags: ['électronique', 'DJ', 'nuit-blanche', 'festival'],
     capacity: 500,
-    rating: 4.3
+    rating: 4.3,
+    reviews: [
+      {
+        id: '10',
+        userId: 'user10',
+        userName: 'Alex R.',
+        rating: 4,
+        comment: 'Super ambiance ! Les DJs étaient au top. Parfait pour danser toute la nuit.',
+        date: '2024-01-19'
+      },
+      {
+        id: '11',
+        userId: 'user11',
+        userName: 'Marine L.',
+        rating: 5,
+        comment: 'Nuit inoubliable ! Organisation parfaite et son excellent.',
+        date: '2024-01-17'
+      }
+    ]
   },
   {
     id: '7',
@@ -209,7 +299,25 @@ export const mockEvents: Event[] = [
     },
     tags: ['poterie', 'céramique', 'atelier', 'artisanat'],
     capacity: 8,
-    rating: 4.7
+    rating: 4.7,
+    reviews: [
+      {
+        id: '12',
+        userId: 'user12',
+        userName: 'Claire B.',
+        rating: 5,
+        comment: 'Atelier très bien encadré ! J\'ai créé une pièce magnifique. Très satisfaite.',
+        date: '2024-01-16'
+      },
+      {
+        id: '13',
+        userId: 'user13',
+        userName: 'Nicolas F.',
+        rating: 4,
+        comment: 'Expérience relaxante et créative. L\'artisan est très patient et pédagogue.',
+        date: '2024-01-14'
+      }
+    ]
   },
   {
     id: '8',
@@ -238,8 +346,26 @@ export const mockEvents: Event[] = [
     },
     tags: ['vin', 'dégustation', 'naturel', 'sommelier'],
     capacity: 20,
-    rating: 4.8
-  },
+    rating: 4.8,
+    reviews: [
+      {
+        id: '14',
+        userId: 'user14',
+        userName: 'Vincent P.',
+        rating: 5,
+        comment: 'Dégustation exceptionnelle ! Le sommelier est passionné et très compétent.',
+        date: '2024-01-15'
+      },
+      {
+        id: '15',
+        userId: 'user15',
+        userName: 'Isabelle M.',
+        rating: 5,
+        comment: 'Découverte de vins naturels incroyables. Ambiance chaleureuse et conviviale.',
+        date: '2024-01-13'
+      }
+    ]
+  ,
   {
     id: '9',
     title: 'Lecture Théâtrale - Auteurs Contemporains',
@@ -267,8 +393,26 @@ export const mockEvents: Event[] = [
     },
     tags: ['lecture', 'théâtre', 'contemporain', 'intimité'],
     capacity: 60,
-    rating: 4.6
-  },
+    rating: 4.6,
+    reviews: [
+      {
+        id: '16',
+        userId: 'user16',
+        userName: 'Pauline D.',
+        rating: 5,
+        comment: 'Moment magique ! Les comédiens donnent vie aux textes de manière remarquable.',
+        date: '2024-01-12'
+      },
+      {
+        id: '17',
+        userId: 'user17',
+        userName: 'Romain S.',
+        rating: 4,
+        comment: 'Très belle découverte d'auteurs contemporains. Lecture de qualité.',
+        date: '2024-01-10'
+      }
+    ]
+  ,
   {
     id: '10',
     title: 'Visite Guidée - Paris Révolutionnaire',
@@ -296,8 +440,26 @@ export const mockEvents: Event[] = [
     },
     tags: ['révolution', 'histoire', 'visite-guidée', 'bastille'],
     capacity: 25,
-    rating: 4.9
-  },
+    rating: 4.9,
+    reviews: [
+      {
+        id: '18',
+        userId: 'user18',
+        userName: 'Laurent G.',
+        rating: 5,
+        comment: 'Visite passionnante ! Le guide est très érudit et rend l'histoire vivante.',
+        date: '2024-01-11'
+      },
+      {
+        id: '19',
+        userId: 'user19',
+        userName: 'Céline H.',
+        rating: 5,
+        comment: 'Parcours très bien conçu. On apprend énormément sur la Révolution française.',
+        date: '2024-01-09'
+      }
+    ]
+  ,
   {
     id: '11',
     title: 'Concert Acoustique - Chanson Française',
@@ -325,8 +487,26 @@ export const mockEvents: Event[] = [
     },
     tags: ['chanson-française', 'acoustique', 'émergent', 'intimité'],
     capacity: 120,
-    rating: 4.5
-  },
+    rating: 4.5,
+    reviews: [
+      {
+        id: '20',
+        userId: 'user20',
+        userName: 'Fabien L.',
+        rating: 4,
+        comment: 'Concert intimiste très agréable. Les artistes sont talentueux.',
+        date: '2024-01-08'
+      },
+      {
+        id: '21',
+        userId: 'user21',
+        userName: 'Amélie R.',
+        rating: 5,
+        comment: 'Soirée émouvante ! La chanson française dans toute sa splendeur.',
+        date: '2024-01-06'
+      }
+    ]
+  ,
   {
     id: '12',
     title: 'Exposition Photo - Paris Secret',
@@ -353,8 +533,26 @@ export const mockEvents: Event[] = [
       type: 'venue'
     },
     tags: ['photographie', 'paris', 'gratuit', 'local'],
-    rating: 4.4
-  },
+    rating: 4.4,
+    reviews: [
+      {
+        id: '22',
+        userId: 'user22',
+        userName: 'Julien M.',
+        rating: 4,
+        comment: 'Exposition très intéressante ! Des photos qui révèlent un Paris méconnu.',
+        date: '2024-01-05'
+      },
+      {
+        id: '23',
+        userId: 'user23',
+        userName: 'Sandra K.',
+        rating: 5,
+        comment: 'Magnifique découverte ! Les photographes ont un regard unique sur la ville.',
+        date: '2024-01-03'
+      }
+    ]
+  ,
   {
     id: '13',
     title: 'Atelier Pâtisserie - Macarons Parisiens',
@@ -382,7 +580,25 @@ export const mockEvents: Event[] = [
     },
     tags: ['pâtisserie', 'macarons', 'chef', 'technique'],
     capacity: 10,
-    rating: 4.8
+    rating: 4.8,
+    reviews: [
+      {
+        id: '24',
+        userId: 'user24',
+        userName: 'Mathieu P.',
+        rating: 5,
+        comment: 'Atelier parfait ! J\'ai réussi à faire des macarons délicieux. Très satisfait !',
+        date: '2024-01-02'
+      },
+      {
+        id: '25',
+        userId: 'user25',
+        userName: 'Valérie T.',
+        rating: 4,
+        comment: 'Chef très pédagogue. Les macarons sont un défi mais c\'est très gratifiant.',
+        date: '2024-01-01'
+      }
+    ]
   },
   {
     id: '14',
@@ -411,8 +627,26 @@ export const mockEvents: Event[] = [
     },
     tags: ['contes', 'légendes', 'urbain', 'mystère'],
     capacity: 40,
-    rating: 4.7
-  },
+    rating: 4.7,
+    reviews: [
+      {
+        id: '26',
+        userId: 'user26',
+        userName: 'Olivier D.',
+        rating: 5,
+        comment: 'Soirée captivante ! Le conteur nous emmène dans un univers mystérieux.',
+        date: '2023-12-30'
+      },
+      {
+        id: '27',
+        userId: 'user27',
+        userName: 'Nathalie B.',
+        rating: 4,
+        comment: 'Très bonne ambiance. Les légendes urbaines sont fascinantes.',
+        date: '2023-12-28'
+      }
+    ]
+  ,
   {
     id: '15',
     title: 'Visite Archéologique - Crypte Notre-Dame',
@@ -440,7 +674,25 @@ export const mockEvents: Event[] = [
     },
     tags: ['archéologie', 'notre-dame', 'crypte', 'histoire'],
     capacity: 30,
-    rating: 4.6
+    rating: 4.6,
+    reviews: [
+      {
+        id: '28',
+        userId: 'user28',
+        userName: 'Philippe L.',
+        rating: 5,
+        comment: 'Visite exceptionnelle ! On découvre 2000 ans d\'histoire sous nos pieds.',
+        date: '2023-12-27'
+      },
+      {
+        id: '29',
+        userId: 'user29',
+        userName: 'Caroline M.',
+        rating: 4,
+        comment: 'Très instructif ! La crypte révèle des trésors archéologiques incroyables.',
+        date: '2023-12-25'
+      }
+    ]
   }
 ];
 

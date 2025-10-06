@@ -60,36 +60,36 @@ export function Discover() {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-dark-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-8">
+        <div className="mb-6 sm:mb-8">
+          <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-4">
             {t('discover.title')}
           </h1>
-          <p className="text-gray-600 dark:text-gray-300">
+          <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
             {t('discover.subtitle')}
           </p>
         </div>
 
-        <div className="mb-8 space-y-4">
-          <div className="flex flex-col sm:flex-row gap-4">
+        <div className="mb-6 sm:mb-8 space-y-3 sm:space-y-4">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
             <div className="flex-1">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 sm:w-5 sm:h-5" />
                 <Input
                   placeholder={t('discover.searchPlaceholder')}
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-10"
+                  className="pl-9 sm:pl-10 text-sm sm:text-base"
                 />
               </div>
             </div>
             <Button
               variant="outline"
               onClick={() => setShowFilters(!showFilters)}
-              className="flex items-center space-x-2"
+              className="flex items-center space-x-2 text-sm sm:text-base"
             >
               <Filter className="w-4 h-4" />
-              <span>{t('common.filters')}</span>
+              <span className="hidden sm:inline">{t('common.filters')}</span>
             </Button>
           </div>
 
@@ -111,21 +111,21 @@ export function Discover() {
         </div>
 
         {spotlightArtists.length > 0 && (
-          <div className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+          <div className="mb-8 sm:mb-12">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">
               Spotlight Artists
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {spotlightArtists.map((artist) => (
                 <Card key={artist.id} hover className="text-center">
                   <img
                     src={artist.image}
                     alt={artist.name}
-                    className="w-20 h-20 rounded-full mx-auto mb-4 object-cover"
+                    className="w-16 h-16 sm:w-20 sm:h-20 rounded-full mx-auto mb-3 sm:mb-4 object-cover"
                   />
-                  <h3 className="font-semibold text-lg mb-2">{artist.name}</h3>
-                  <p className="text-gray-600 text-sm mb-4">{artist.bio}</p>
-                  <div className="flex flex-wrap justify-center gap-2">
+                  <h3 className="font-semibold text-base sm:text-lg mb-2">{artist.name}</h3>
+                  <p className="text-gray-600 text-xs sm:text-sm mb-3 sm:mb-4 line-clamp-2">{artist.bio}</p>
+                  <div className="flex flex-wrap justify-center gap-1 sm:gap-2">
                     {artist.genre.map((genre) => (
                       <Badge key={genre} variant="primary" size="sm">
                         {genre}
@@ -138,79 +138,79 @@ export function Discover() {
           </div>
         )}
 
-        <div className="mb-8">
-          <div className="flex justify-between items-center mb-6">
-            <h2 className="text-2xl font-bold text-gray-900">
+        <div className="mb-6 sm:mb-8">
+          <div className="flex justify-between items-center mb-4 sm:mb-6">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-900">
               Events ({filteredEvents.length})
             </h2>
           </div>
 
           {filteredEvents.length === 0 ? (
-            <Card className="text-center py-12">
-              <p className="text-gray-500 text-lg">
+            <Card className="text-center py-8 sm:py-12">
+              <p className="text-gray-500 text-base sm:text-lg">
                 {t('discover.noResults')}
               </p>
             </Card>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {filteredEvents.map((event) => (
                 <Card key={event.id} hover className="overflow-hidden">
                   <div className="relative">
                     <img
                       src={event.image}
                       alt={event.title}
-                      className="w-full h-48 object-cover"
+                      className="w-full h-40 sm:h-48 object-cover"
                     />
                     <button
                       onClick={() => toggleWishlist(event.id)}
-                      className={`absolute top-4 right-4 p-2 rounded-full transition-colors ${
+                      className={`absolute top-3 right-3 sm:top-4 sm:right-4 p-1.5 sm:p-2 rounded-full transition-colors ${
                         state.wishlist.includes(event.id)
                           ? 'bg-red-500 text-white'
                           : 'bg-white text-gray-600 hover:text-red-500'
                       }`}
                     >
-                      <Heart className={`w-5 h-5 ${
+                      <Heart className={`w-4 h-4 sm:w-5 sm:h-5 ${
                         state.wishlist.includes(event.id) ? 'fill-current' : ''
                       }`} />
                     </button>
                     <Badge 
                       variant="primary" 
-                      className="absolute bottom-4 left-4"
+                      className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 text-xs"
                     >
                       {event.category}
                     </Badge>
                   </div>
 
-                  <div className="p-6">
-                    <h3 className="font-semibold text-lg mb-2 line-clamp-2">
+                  <div className="p-4 sm:p-6">
+                    <h3 className="font-semibold text-base sm:text-lg mb-2 line-clamp-2">
                       {event.title}
                     </h3>
-                    <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                    <p className="text-gray-600 text-xs sm:text-sm mb-3 sm:mb-4 line-clamp-2 sm:line-clamp-3">
                       {event.description}
                     </p>
 
-                    <div className="space-y-2 mb-4">
-                      <div className="flex items-center text-sm text-gray-500">
-                        <Clock className="w-4 h-4 mr-2" />
-                        {formatDate(event.date)} à {event.time}
+                    <div className="space-y-1.5 sm:space-y-2 mb-3 sm:mb-4">
+                      <div className="flex items-center text-xs sm:text-sm text-gray-500">
+                        <Clock className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" />
+                        <span className="truncate">{formatDate(event.date)} à {event.time}</span>
                       </div>
-                      <div className="flex items-center text-sm text-gray-500">
-                        <MapPin className="w-4 h-4 mr-2" />
-                        {event.location.name}
+                      <div className="flex items-center text-xs sm:text-sm text-gray-500">
+                        <MapPin className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" />
+                        <span className="truncate">{event.location.name}</span>
                       </div>
-                      <div className="flex items-center text-sm text-gray-500">
-                        <Euro className="w-4 h-4 mr-2" />
+                      <div className="flex items-center text-xs sm:text-sm text-gray-500">
+                        <Euro className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" />
                         {formatPrice(event)}
                       </div>
                     </div>
 
                     {event.rating && (
-                      <div className="flex items-center mb-4">
+                      <div className="flex items-center mb-3 sm:mb-4">
                         <div className="flex items-center">
                           {[...Array(5)].map((_, i) => (
                             <Star
                               key={i}
-                              className={`w-4 h-4 ${
+                              className={`w-3 h-3 sm:w-4 sm:h-4 ${
                                 i < Math.floor(event.rating!)
                                   ? 'text-yellow-400 fill-current'
                                   : 'text-gray-300'
@@ -218,13 +218,13 @@ export function Discover() {
                             />
                           ))}
                         </div>
-                        <span className="text-sm text-gray-600 ml-2">
+                        <span className="text-xs sm:text-sm text-gray-600 ml-1 sm:ml-2">
                           {event.rating} ({event.reviews?.length || 0} reviews)
                         </span>
                       </div>
                     )}
 
-                    <div className="flex flex-wrap gap-2 mb-4">
+                    <div className="flex flex-wrap gap-1 sm:gap-2 mb-3 sm:mb-4">
                       {event.tags.slice(0, 3).map((tag) => (
                         <Badge key={tag} variant="secondary" size="sm">
                           {tag}
@@ -234,7 +234,7 @@ export function Discover() {
 
                     <Button 
                       variant="primary" 
-                      className="w-full"
+                      className="w-full text-sm sm:text-base"
                       onClick={() => window.location.href = `/event/${event.id}`}
                     >
                       {t('common.details')}
