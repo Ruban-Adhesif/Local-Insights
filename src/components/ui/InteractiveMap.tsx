@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
@@ -43,7 +43,6 @@ function MapEvents({ events, onEventClick, onToggleWishlist, wishlist = [], sele
     <>
       {events.map((event) => {
         const isInWishlist = wishlist.includes(event.id);
-        const isSelected = selectedEvent?.id === event.id;
         
         const formatPrice = () => {
           if (event.price.min === 0 && event.price.max === 0) {
