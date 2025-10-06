@@ -365,7 +365,7 @@ export const mockEvents: Event[] = [
         date: '2024-01-13'
       }
     ]
-  ,
+  },
   {
     id: '9',
     title: 'Lecture Théâtrale - Auteurs Contemporains',
@@ -408,11 +408,11 @@ export const mockEvents: Event[] = [
         userId: 'user17',
         userName: 'Romain S.',
         rating: 4,
-        comment: 'Très belle découverte d'auteurs contemporains. Lecture de qualité.',
+        comment: 'Très belle découverte d\'auteurs contemporains. Lecture de qualité.',
         date: '2024-01-10'
       }
     ]
-  ,
+  },
   {
     id: '10',
     title: 'Visite Guidée - Paris Révolutionnaire',
@@ -447,7 +447,7 @@ export const mockEvents: Event[] = [
         userId: 'user18',
         userName: 'Laurent G.',
         rating: 5,
-        comment: 'Visite passionnante ! Le guide est très érudit et rend l'histoire vivante.',
+        comment: 'Visite passionnante ! Le guide est très érudit et rend l\'histoire vivante.',
         date: '2024-01-11'
       },
       {
@@ -459,7 +459,7 @@ export const mockEvents: Event[] = [
         date: '2024-01-09'
       }
     ]
-  ,
+  },
   {
     id: '11',
     title: 'Concert Acoustique - Chanson Française',
@@ -506,7 +506,7 @@ export const mockEvents: Event[] = [
         date: '2024-01-06'
       }
     ]
-  ,
+  },
   {
     id: '12',
     title: 'Exposition Photo - Paris Secret',
@@ -552,7 +552,7 @@ export const mockEvents: Event[] = [
         date: '2024-01-03'
       }
     ]
-  ,
+  },
   {
     id: '13',
     title: 'Atelier Pâtisserie - Macarons Parisiens',
@@ -646,7 +646,7 @@ export const mockEvents: Event[] = [
         date: '2023-12-28'
       }
     ]
-  ,
+  },
   {
     id: '15',
     title: 'Visite Archéologique - Crypte Notre-Dame',
